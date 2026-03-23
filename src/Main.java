@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,19 +6,17 @@ public class Main {
         System.out.println("=== Train Consist Management App ===");
         System.out.println();
 
-        // Create train consist
-        ArrayList<String> trainConsist = new ArrayList<>();
+        HashSet<String> bogieIds = new HashSet<>();
 
-        // Add passenger bogies
-        trainConsist.add("Sleeper");
-        trainConsist.add("AC Chair Car");
-        trainConsist.add("First Class");
+        bogieIds.add("BG101");
+        bogieIds.add("BG102");
+        bogieIds.add("BG103");
+        bogieIds.add("BG101"); // duplicate
 
-        // Display details
-        System.out.println("Passenger bogies added successfully...");
-        System.out.println("Current Train Consist : " + trainConsist);
-        System.out.println("Total Bogies : " + trainConsist.size());
+        System.out.println("Unique bogie IDs added successfully...");
+        System.out.println("Current Bogie IDs : " + bogieIds);
+        System.out.println("Total Unique Bogies : " + bogieIds.size());
         System.out.println();
-        System.out.println("System ready for next operation...");
+        System.out.println("Duplicate bogie IDs are automatically ignored.");
     }
 }
