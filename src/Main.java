@@ -1,4 +1,4 @@
-import java.util.TreeSet;
+import java.util.LinkedHashSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,18 +6,17 @@ public class Main {
         System.out.println("=== Train Consist Management App ===");
         System.out.println();
 
-        TreeSet<String> bogieIds = new TreeSet<>();
+        LinkedHashSet<String> bogies = new LinkedHashSet<>();
 
-        bogieIds.add("BG105");
-        bogieIds.add("BG101");
-        bogieIds.add("BG103");
-        bogieIds.add("BG102");
-        bogieIds.add("BG101"); // duplicate
+        bogies.add("Engine");
+        bogies.add("Sleeper");
+        bogies.add("Guard");
+        bogies.add("Sleeper"); // duplicate
 
-        System.out.println("Ordered bogie IDs maintained successfully...");
-        System.out.println("Current Ordered Bogie IDs : " + bogieIds);
-        System.out.println("Total Unique Ordered Bogies : " + bogieIds.size());
+        System.out.println("Insertion order preserved successfully...");
+        System.out.println("Current Train Sequence : " + bogies);
+        System.out.println("Total Unique Bogies : " + bogies.size());
         System.out.println();
-        System.out.println("Bogie IDs are sorted automatically and duplicates are ignored.");
+        System.out.println("Duplicate bogies are ignored and original order is maintained.");
     }
 }
