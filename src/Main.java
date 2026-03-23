@@ -6,12 +6,19 @@ public class Main {
         System.out.println("=== Train Consist Management App ===");
         System.out.println();
 
+        // Create train consist
         ArrayList<String> trainConsist = new ArrayList<>();
 
-        System.out.println("Train initialized successfully...");
-        System.out.println("Initial Bogie Count : " + trainConsist.size());
+        // Add passenger bogies
+        trainConsist.add("Sleeper");
+        trainConsist.add("AC Chair Car");
+        trainConsist.add("First Class");
+
+        // Display details
+        System.out.println("Passenger bogies added successfully...");
         System.out.println("Current Train Consist : " + trainConsist);
+        System.out.println("Total Bogies : " + trainConsist.size());
         System.out.println();
-        System.out.println("System ready for operations...");
+        System.out.println("System ready for next operation...");
     }
 }
